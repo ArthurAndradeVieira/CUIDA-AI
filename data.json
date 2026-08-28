@@ -1,0 +1,106 @@
+{
+  "colaboradores": [
+    {
+      "id": "colab_01",
+      "nome": "Lucas Silva",
+      "cargo": "Desenvolvedor Full Stack Sênior",
+      "time": "Core Platform",
+      "foto_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Lucas",
+      "solides_profiler": {
+        "perfil_predominante": "Analista / Planejador",
+        "caracteristicas_chave": "Alta necessidade de foco contínuo, perfeccionismo técnico, baixa tolerância à fragmentação e aversão a interrupções bruscas",
+        "nivel_exigencia_pessoal": "Alto",
+        "energia_atual": "Baixa (Drenada)"
+      },
+      "jira_telemetria": {
+        "horas_reuniao_semana": 31.5,
+        "cards_em_aberto": 14,
+        "cards_atrasados": 5,
+        "mudancas_de_contexto_semana": 28,
+        "commits_fora_do_horario_pct": 38.0,
+        "dias_consecutivos_sem_folga": 19
+      },
+      "qulture_rocks": {
+        "enps_recente": 4,
+        "pdi_status": "Paralisado por falta de tempo há 60 dias",
+        "ultima_avaliacao_desempenho": "Excepcional em entregas técnicas, porém sinalizou desgaste severo na autoavaliação",
+        "resumo_ultimo_pulso": "Sensação de que o tempo de codificação sumiu; passo o dia todo alinhando reuniões de emergência.",
+        "historico_1on1s": [
+          "Semana 1: Relatou que a refatoração do banco estava complexa, mas no prazo.",
+          "Semana 2: Comentou sobre cansaço devido a plantões seguidos e contexto fragmentado.",
+          "Semana 3: 1-on-1 cancelado pelo gestor por conflito de agenda.",
+          "Semana 4: Mencionou frustração por não conseguir focar nas tarefas principais de engenharia."
+        ]
+      },
+      "cenario_esperado": "Risco Crítico de Burnout (Incompatibilidade de Perfil Analista com Rotina Caótica)"
+    },
+    {
+      "id": "colab_02",
+      "nome": "Mariana Souza",
+      "cargo": "Product Manager",
+      "time": "Growth & Expansão",
+      "foto_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Mariana",
+      "solides_profiler": {
+        "perfil_predominante": "Comunicador / Executor",
+        "caracteristicas_chave": "Orientada a ritmo rápido, facilidade com reuniões e articulação, porém vulnerável à sobrecarga por excesso de compromissos assumidos",
+        "nivel_exigencia_pessoal": "Médio-Alto",
+        "energia_atual": "Média"
+      },
+      "jira_telemetria": {
+        "horas_reuniao_semana": 24.0,
+        "cards_em_aberto": 9,
+        "cards_atrasados": 2,
+        "mudancas_de_contexto_semana": 15,
+        "commits_fora_do_horario_pct": 12.0,
+        "dias_consecutivos_sem_folga": 5
+      },
+      "qulture_rocks": {
+        "enps_recente": 7,
+        "pdi_status": "Em andamento (65% concluído)",
+        "ultima_avaliacao_desempenho": "Forte senso de liderança e facilidade de alinhamento com stakeholders",
+        "resumo_ultimo_pulso": "Volume alto de entregas para o trimestre, porém alinhamento com stakeholders está fluido.",
+        "historico_1on1s": [
+          "Semana 1: Alinhamento de metas trimestrais, energia alta.",
+          "Semana 2: Apontou dependência de aprovações externas gerando pequenas esperas.",
+          "Semana 3: Discutiu priorização de features com a liderança.",
+          "Semana 4: Indicou cansaço pontual com o fechamento do mês, mas sob controle."
+        ]
+      },
+      "cenario_esperado": "Alerta Moderado (Sobrecarga Sazonal em Perfil Comunicador)"
+    },
+    {
+      "id": "colab_03",
+      "nome": "Rodrigo Mendes",
+      "cargo": "Engenheiro de Dados Pleno",
+      "time": "Data Intelligence",
+      "foto_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rodrigo",
+      "solides_profiler": {
+        "perfil_predominante": "Planejador / Analista",
+        "caracteristicas_chave": "Busca constância, processos estruturados, baixo estresse sob previsibilidade e ritmo metódico",
+        "nivel_exigencia_pessoal": "Médio",
+        "energia_atual": "Alta"
+      },
+      "jira_telemetria": {
+        "horas_reuniao_semana": 9.5,
+        "cards_em_aberto": 4,
+        "cards_atrasados": 0,
+        "mudancas_de_contexto_semana": 4,
+        "commits_fora_do_horario_pct": 2.0,
+        "dias_consecutivos_sem_folga": 0
+      },
+      "qulture_rocks": {
+        "enps_recente": 9,
+        "pdi_status": "Em dia (85% concluído)",
+        "ultima_avaliacao_desempenho": "Excelente consistência técnica e evolução contínua em arquitetura de dados",
+        "resumo_ultimo_pulso": "Boa cadência técnica, sprints bem dimensionadas e tempo adequado para documentação.",
+        "historico_1on1s": [
+          "Semana 1: Conclusão da migração do pipeline com sucesso.",
+          "Semana 2: Feedback positivo sobre autonomia e mentoria recebida.",
+          "Semana 3: Discussão de plano de desenvolvimento individual (PDI).",
+          "Semana 4: Demonstrou motivação para assumir novos desafios de arquitetura."
+        ]
+      },
+      "cenario_esperado": "Estável / Saudável (Ambiente Alinhado ao Perfil)"
+    }
+  ]
+}
