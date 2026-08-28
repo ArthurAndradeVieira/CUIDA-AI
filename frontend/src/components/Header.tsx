@@ -1,3 +1,4 @@
+import { Radio } from "lucide-react";
 import logo from "../assets/logo.png";
 
 export default function Header() {
@@ -12,7 +13,9 @@ export default function Header() {
           <p>Plataforma Preditiva e Prescritiva de Blindagem Operacional e Sustentabilidade Humana</p>
         </div>
       </div>
-      <span className="header-tag">📡 Triangulação: Solides • Jira • Qulture.Rocks</span>
+      <span className="header-tag">
+        <Radio size={14} className="icon-inline" /> Triangulação: Solides • Jira • Qulture.Rocks
+      </span>
     </header>
   );
 }

@@ -1,3 +1,4 @@
+import { Brain, Target } from "lucide-react";
 import type { Colaborador } from "../types";
 
 function statColor(alert: boolean) {
@@ -22,8 +23,12 @@ export default function ColabHero({ colab }: { colab: Colaborador }) {
             <b>{colab.cargo}</b> • Squad: <span style={{ color: "var(--color-brand)", fontWeight: 600 }}>{colab.time}</span>
           </p>
           <div className="colab-badges">
-            <span className="badge-pill">🧠 Solides: {solides.perfil_predominante}</span>
-            <span className="badge-pill badge-neutral">🎯 PDI: {pdiResumo}</span>
+            <span className="badge-pill">
+              <Brain size={13} className="icon-inline" /> Solides: {solides.perfil_predominante}
+            </span>
+            <span className="badge-pill badge-neutral">
+              <Target size={13} className="icon-inline" /> PDI: {pdiResumo}
+            </span>
           </div>
         </div>
       </div>

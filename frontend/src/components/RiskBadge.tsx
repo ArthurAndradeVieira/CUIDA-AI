@@ -1,3 +1,6 @@
+import { AlertOctagon, AlertTriangle, CheckCircle2 } from "lucide-react";
+import type { ReactNode } from "react";
+
 export type RiskLevel = "critico" | "alerta" | "estavel";
 
 export function riskLevelFromScenario(cenarioEsperado: string): RiskLevel {
@@ -12,12 +15,24 @@ export function riskLevelFromScore(score: number): RiskLevel {
   return "estavel";
 }
 
-const LABELS: Record<RiskLevel, string> = {
-  critico: "🔴 Risco Crítico",
-  alerta: "🟡 Alerta Moderado",
-  estavel: "🟢 Estável",
+const ICONS: Record<RiskLevel, typeof AlertOctagon> = {
+  critico: AlertOctagon,
+  alerta: AlertTriangle,
+  estavel: CheckCircle2,
 };
 
-export default function RiskBadge({ level, label }: { level: RiskLevel; label?: string }) {
-  return <span className={`badge-risco badge-risco-${level}`}>{label ?? LABELS[level]}</span>;
+const LABELS: Record<RiskLevel, string> = {
+  critico: "Risco Crítico",
+  alerta: "Alerta Moderado",
+  estavel: "Estável",
+};
+
+export default function RiskBadge({ level, label }: { level: RiskLevel; label?: ReactNode }) {
+  const Icon = ICONS[level];
+  return (
+    <span className={`badge-risco badge-risco-${level}`}>
+      <Icon size={14} className="icon-inline" />
+      {label ?? LABELS[level]}
+    </span>
+  );
 }

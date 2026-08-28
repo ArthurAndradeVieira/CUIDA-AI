@@ -1,3 +1,4 @@
+import { ClipboardList, History, Lightbulb } from "lucide-react";
 import type { Colaborador, Diagnostico } from "../../types";
 
 function dicaGestor(perfil: string) {
@@ -39,7 +40,9 @@ export default function OneOnOneTab({ colab, diag }: { colab: Colaborador; diag:
       <div>
         <div className="card" style={{ marginBottom: 16 }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <h3 style={{ margin: 0 }}>📋 Pauta Calibrada para o Próximo 1-on-1</h3>
+            <h3 style={{ margin: 0, display: "flex", alignItems: "center", gap: 8 }}>
+              <ClipboardList size={18} className="icon-inline" /> Pauta Calibrada para o Próximo 1-on-1
+            </h3>
             <span className="badge-pill">Solides Profiler Calibrated</span>
           </div>
           <p style={{ color: "var(--color-text-soft)", fontSize: "0.88rem", marginTop: 8, marginBottom: 0 }}>
@@ -55,12 +58,19 @@ export default function OneOnOneTab({ colab, diag }: { colab: Colaborador; diag:
           </div>
         ))}
 
-        <div className="manager-tip">💡 <b>Guia do Gestor:</b> {dicaGestor(colab.solides_profiler.perfil_predominante)}</div>
+        <div className="manager-tip" style={{ display: "flex", gap: 8 }}>
+          <Lightbulb size={16} className="icon-inline" style={{ marginTop: 2 }} />
+          <span>
+            <b>Guia do Gestor:</b> {dicaGestor(colab.solides_profiler.perfil_predominante)}
+          </span>
+        </div>
       </div>
 
       <div>
         <div className="card" style={{ marginBottom: 16 }}>
-          <h3 style={{ margin: 0 }}>⏳ Histórico Recente de 1-on-1s (Qulture.Rocks)</h3>
+          <h3 style={{ margin: 0, display: "flex", alignItems: "center", gap: 8 }}>
+            <History size={18} className="icon-inline" /> Histórico Recente de 1-on-1s (Qulture.Rocks)
+          </h3>
         </div>
 
         {colab.qulture_rocks.historico_1on1s.map((nota, i) => {

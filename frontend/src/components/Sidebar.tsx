@@ -1,3 +1,4 @@
+import { Bot, Brain, Circle, Dna, Plug, Target, User, Zap } from "lucide-react";
 import type { Colaborador } from "../types";
 import logo from "../assets/logo.png";
 
@@ -10,10 +11,10 @@ interface SidebarProps {
 }
 
 const CONECTORES = [
-  { icone: "🧠", nome: "Solides Profiler", status: "🟢 Ativo" },
-  { icone: "⚡", nome: "Jira & Calendar", status: "🟢 Sincronizado" },
-  { icone: "🎯", nome: "Qulture.Rocks", status: "🟢 Conectado" },
-  { icone: "🤖", nome: "Gemini 2.5 Flash", status: "🟢 Online" },
+  { Icon: Brain, nome: "Solides Profiler", status: "Ativo" },
+  { Icon: Zap, nome: "Jira & Calendar", status: "Sincronizado" },
+  { Icon: Target, nome: "Qulture.Rocks", status: "Conectado" },
+  { Icon: Bot, nome: "Gemini 2.5 Flash", status: "Online" },
 ];
 
 export default function Sidebar({
@@ -37,7 +38,9 @@ export default function Sidebar({
       <hr />
 
       <div>
-        <div className="sidebar-section-title">👤 Seleção de Colaborador</div>
+        <div className="sidebar-section-title">
+          <User size={14} className="icon-inline" /> Seleção de Colaborador
+        </div>
         <select
           className="select-input"
           value={selecionado.id}
@@ -55,8 +58,8 @@ export default function Sidebar({
           <div className="role">{selecionado.cargo}</div>
           <div className="squad">{selecionado.time}</div>
           <div className="sidebar-label">Perfil Comportamental</div>
-          <span className="badge-pill" style={{ marginTop: 4, display: "inline-block" }}>
-            🧬 {selecionado.solides_profiler.perfil_predominante}
+          <span className="badge-pill" style={{ marginTop: 4 }}>
+            <Dna size={13} className="icon-inline" /> {selecionado.solides_profiler.perfil_predominante}
           </span>
         </div>
       </div>
@@ -64,14 +67,18 @@ export default function Sidebar({
       <hr />
 
       <div>
-        <div className="sidebar-section-title">🔌 Conectores Ativos</div>
+        <div className="sidebar-section-title">
+          <Plug size={14} className="icon-inline" /> Conectores Ativos
+        </div>
         <div className="connector-list">
           {CONECTORES.map((c) => (
             <div className="connector-row" key={c.nome}>
-              <span>
-                {c.icone} <b>{c.nome}</b>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                <c.Icon size={14} className="icon-inline" /> <b>{c.nome}</b>
               </span>
-              <span className="connector-status">{c.status}</span>
+              <span className="connector-status">
+                <Circle size={8} fill="currentColor" stroke="none" className="icon-inline" /> {c.status}
+              </span>
             </div>
           ))}
         </div>
@@ -83,8 +90,10 @@ export default function Sidebar({
         className="btn btn-primary btn-block"
         onClick={onRecalcular}
         disabled={carregando}
+        style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}
       >
-        ⚡ {carregando ? "Analisando..." : "Recalcular Diagnóstico com IA"}
+        <Zap size={16} className="icon-inline" />
+        {carregando ? "Analisando..." : "Recalcular Diagnóstico com IA"}
       </button>
     </aside>
   );

@@ -1,3 +1,4 @@
+import { Brain, Target, Zap } from "lucide-react";
 import type { Colaborador } from "../../types";
 
 function energiaValor(texto: string) {
@@ -21,7 +22,9 @@ export default function TriangulacaoTab({ colab }: { colab: Colaborador }) {
   return (
     <div className="grid-3">
       <div className="card card-accent-solides">
-        <h3>🧠 Solides Profiler</h3>
+        <h3>
+          <Brain size={18} className="icon-inline" /> Solides Profiler
+        </h3>
         <div className="metric-row">
           <span className="metric-label">Perfil Predominante</span>
           <span className="metric-val" style={{ color: "var(--color-brand-strong)" }}>
@@ -53,7 +56,9 @@ export default function TriangulacaoTab({ colab }: { colab: Colaborador }) {
       </div>
 
       <div className="card card-accent-jira">
-        <h3>⚡ Jira &amp; Telemetria</h3>
+        <h3>
+          <Zap size={18} className="icon-inline" /> Jira &amp; Telemetria
+        </h3>
         <div className="metric-row">
           <span className="metric-label">Reuniões / Semana</span>
           <span className="metric-val" style={{ color: jira.horas_reuniao_semana > 25 ? "var(--color-danger)" : "var(--color-jira)" }}>
@@ -86,7 +91,9 @@ export default function TriangulacaoTab({ colab }: { colab: Colaborador }) {
       </div>
 
       <div className="card card-accent-qulture">
-        <h3>🎯 Qulture.Rocks</h3>
+        <h3>
+          <Target size={18} className="icon-inline" /> Qulture.Rocks
+        </h3>
         <div className="metric-row">
           <span className="metric-label">eNPS Recente</span>
           <span className="metric-val" style={{ color: qulture.enps_recente < 6 ? "var(--color-danger)" : "var(--color-brand)" }}>

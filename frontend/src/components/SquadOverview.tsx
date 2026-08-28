@@ -1,3 +1,4 @@
+import { Users } from "lucide-react";
 import type { Colaborador } from "../types";
 import RiskBadge, { riskLevelFromScenario } from "./RiskBadge";
 
@@ -10,7 +11,9 @@ interface SquadOverviewProps {
 export default function SquadOverview({ colaboradores, selecionadoId, onSelecionar }: SquadOverviewProps) {
   return (
     <section>
-      <h3 className="section-title">👥 Panorama da Squad (Visão Geral de Risco)</h3>
+      <h3 className="section-title" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <Users size={18} className="icon-inline" /> Panorama da Squad (Visão Geral de Risco)
+      </h3>
       <div className="squad-grid">
         {colaboradores.map((c) => {
           const perfilResumido = c.solides_profiler.perfil_predominante.split("/")[0].trim();
