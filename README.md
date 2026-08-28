@@ -53,28 +53,43 @@ O processamento é realizado por um modelo fundacional avançado via engenharia 
 | **Python 3.10+** | Backend e Orquestração | Linguagem padrão para pipelines de IA com ecossistema maduro de manipulação de dados e SDKs. |
 | **Google GenAI SDK** | Motor de Inferência LLM | Baixa latência, suporte a system instructions complexas e tipagem estrita com schemas JSON. |
 | **Pydantic** | Validação de Dados | Garante que o retorno da IA seja sempre consistente, sem risco de quebra de renderização no frontend. |
-| **Streamlit** | Interface do Usuário (UI) | Prototipagem ágil e reativa em Python puro, permitindo montar dashboards executivos com gráficos e métricas em minutos. |
+| **FastAPI** | API do motor de IA | Expõe `engine.py` (Gemini + fallback determinístico) e `data.json` via HTTP para o frontend, sem reescrever a lógica de IA. |
+| **React + Vite + TypeScript** | Interface do Usuário (UI) | Substitui o Streamlit para eliminar os conflitos de tema/paleta do CSS injetado; permite um design system próprio, leve e consistente. |
 | **JSON Estruturado** | Armazenamento Sintético | Simula bancos de dados corporativos NoSQL sem dependências pesadas de infraestrutura externa no dia do evento. |
 
 ---
 
 ## 5. Como Executar o Protótipo
 
+O projeto agora é dividido em `backend/` (API Python/FastAPI com o motor de IA) e `frontend/` (React/Vite). Os dois precisam rodar ao mesmo tempo, em terminais separados.
+
 ### Pré-requisitos
 * Python 3.10 ou superior
-* Gerenciador de pacotes `pip`
+* Node.js 18+ e `npm`
 
-### Instalação
+### Backend (API)
 
 ```bash
-# 1. Instalar as dependências do projeto
-pip install streamlit google-genai pydantic
+cd backend
+pip install -r requirements.txt
 
-# 2. (Opcional) Configurar a chave de API da Gemini
+# (Opcional) Configurar a chave de API da Gemini
 # Linux/Mac:
 export GEMINI_API_KEY="sua_chave_aqui"
 # Windows (PowerShell):
 $env:GEMINI_API_KEY="sua_chave_aqui"
 
-# 3. Executar o dashboard interativo
-streamlit run app.py
+uvicorn main:app --reload --port 8000
+```
+
+Sem `GEMINI_API_KEY` configurada, a API responde com o fallback determinístico de `engine.py`, exatamente como no protótipo original.
+
+### Frontend (React)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Acesse `http://localhost:5173` (o frontend espera a API em `http://localhost:8000`).
